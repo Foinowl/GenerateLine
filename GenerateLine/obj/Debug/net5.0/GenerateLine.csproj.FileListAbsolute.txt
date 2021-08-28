@@ -1,0 +1,16 @@
+C:\Users\nifpo\Desktop\Учебная практика 3 курс\Задание 1-2 . Генерация маски\GenerateLine\GenerateLine\bin\Debug\net5.0\GenerateLine.exe
+C:\Users\nifpo\Desktop\Учебная практика 3 курс\Задание 1-2 . Генерация маски\GenerateLine\GenerateLine\bin\Debug\net5.0\GenerateLine.deps.json
+C:\Users\nifpo\Desktop\Учебная практика 3 курс\Задание 1-2 . Генерация маски\GenerateLine\GenerateLine\bin\Debug\net5.0\GenerateLine.runtimeconfig.json
+C:\Users\nifpo\Desktop\Учебная практика 3 курс\Задание 1-2 . Генерация маски\GenerateLine\GenerateLine\bin\Debug\net5.0\GenerateLine.runtimeconfig.dev.json
+C:\Users\nifpo\Desktop\Учебная практика 3 курс\Задание 1-2 . Генерация маски\GenerateLine\GenerateLine\bin\Debug\net5.0\GenerateLine.dll
+C:\Users\nifpo\Desktop\Учебная практика 3 курс\Задание 1-2 . Генерация маски\GenerateLine\GenerateLine\bin\Debug\net5.0\ref\GenerateLine.dll
+C:\Users\nifpo\Desktop\Учебная практика 3 курс\Задание 1-2 . Генерация маски\GenerateLine\GenerateLine\bin\Debug\net5.0\GenerateLine.pdb
+C:\Users\nifpo\Desktop\Учебная практика 3 курс\Задание 1-2 . Генерация маски\GenerateLine\GenerateLine\obj\Debug\net5.0\GenerateLine.csprojAssemblyReference.cache
+C:\Users\nifpo\Desktop\Учебная практика 3 курс\Задание 1-2 . Генерация маски\GenerateLine\GenerateLine\obj\Debug\net5.0\GenerateLine.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nifpo\Desktop\Учебная практика 3 курс\Задание 1-2 . Генерация маски\GenerateLine\GenerateLine\obj\Debug\net5.0\GenerateLine.AssemblyInfoInputs.cache
+C:\Users\nifpo\Desktop\Учебная практика 3 курс\Задание 1-2 . Генерация маски\GenerateLine\GenerateLine\obj\Debug\net5.0\GenerateLine.AssemblyInfo.cs
+C:\Users\nifpo\Desktop\Учебная практика 3 курс\Задание 1-2 . Генерация маски\GenerateLine\GenerateLine\obj\Debug\net5.0\GenerateLine.csproj.CoreCompileInputs.cache
+C:\Users\nifpo\Desktop\Учебная практика 3 курс\Задание 1-2 . Генерация маски\GenerateLine\GenerateLine\obj\Debug\net5.0\GenerateLine.dll
+C:\Users\nifpo\Desktop\Учебная практика 3 курс\Задание 1-2 . Генерация маски\GenerateLine\GenerateLine\obj\Debug\net5.0\ref\GenerateLine.dll
+C:\Users\nifpo\Desktop\Учебная практика 3 курс\Задание 1-2 . Генерация маски\GenerateLine\GenerateLine\obj\Debug\net5.0\GenerateLine.pdb
+C:\Users\nifpo\Desktop\Учебная практика 3 курс\Задание 1-2 . Генерация маски\GenerateLine\GenerateLine\obj\Debug\net5.0\GenerateLine.genruntimeconfig.cache
