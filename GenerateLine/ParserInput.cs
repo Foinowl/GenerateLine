@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace GenerateLine
 {
-    class ParserInput
+    class ParserInput : ICommandInput
     {
         private Router _router;
 
@@ -56,26 +56,12 @@ namespace GenerateLine
                         }
 
                         req.AddChild(input[i], 1);
-                 /*       input = SubsList(input, prevIndex, i + 1);*/
-                        /*i = 0;*/
-                        /*continue;*/
-
                     }
                     else if (CheckValidWord(input[i]))
                     {
-                        int cutN;
-
-                        int resultNum = GetNumbers(input, i + 1, out cutN);
+                        int resultNum = GetNumbers(input, i + 1);
 
                         req.AddChild(input[i], resultNum);
-                        if (cutN >= 1)
-                        {
-        /*                    input = SubsList(input, 0, i + cutN + 1);*/
-
-                            /*i = 0;*/
-                            /*continue;*/
-
-                        }
                     }
                     else if (!IsDigit(input[i]))
                     {
@@ -101,10 +87,9 @@ namespace GenerateLine
             return false;
         }
 
-        private int GetNumbers(List<char> other, int nu, out int N)
+        private int GetNumbers(List<char> other, int nu)
         {
             string number = "";
-            N = 0;
             try
             {
                 for (int i = nu; i < other.Count; i++)
@@ -115,7 +100,6 @@ namespace GenerateLine
 
                         number += other[i];
 
-                        N++;
                     }
 
                     else if (String.IsNullOrWhiteSpace(number))
@@ -135,16 +119,6 @@ namespace GenerateLine
                 return 1;
             }
             return !String.IsNullOrWhiteSpace(number) ? Convert.ToInt32(number) : 1;
-        }
-
-        private List<char> SubsList(List<char> inp, int start, int end)
-        {
-            int statIndex = 0;
-            for (int i = start; i < end; i++)
-            {
-                inp.RemoveAt(statIndex);
-            }
-            return inp;
         }
 
         private static bool IsDigit(char ch)
