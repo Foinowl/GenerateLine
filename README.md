@@ -20,3 +20,12 @@
 ### After any mask character (with the exception of curly brackets) , a number can be specified that determines how many times this character is repeated in the generated string.
 
 ## The program also has the ability to save the generated data and masks to text files, read data from files, add data with the same masks to existing files, and handle typical errors.
+
+
+# Example
+
+### Mask: {+7 (}X3{) }X3{-}X2{-}X2
+### Results : 
+1. +7 (864) 645-34-09
+2. +7 (456) 529-83-98
+3. +7 (397) 987-01-72
