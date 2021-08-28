@@ -39,7 +39,7 @@ namespace GenerateLine
         {
             Request req = new Request();
             int i = 0;
-            while (input.Count != 0)
+            while (!(i > input.Count))
             {
                 try
                 {
@@ -56,9 +56,9 @@ namespace GenerateLine
                         }
 
                         req.AddChild(input[i], 1);
-                        input = SubsList(input, prevIndex, i + 1);
-                        i = 0;
-                        continue;
+                 /*       input = SubsList(input, prevIndex, i + 1);*/
+                        /*i = 0;*/
+                        /*continue;*/
 
                     }
                     else if (CheckValidWord(input[i]))
@@ -70,10 +70,10 @@ namespace GenerateLine
                         req.AddChild(input[i], resultNum);
                         if (cutN >= 1)
                         {
-                            input = SubsList(input, 0, i + cutN + 1);
+        /*                    input = SubsList(input, 0, i + cutN + 1);*/
 
-                            i = 0;
-                            continue;
+                            /*i = 0;*/
+                            /*continue;*/
 
                         }
                     }

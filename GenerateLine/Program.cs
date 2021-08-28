@@ -17,6 +17,24 @@ namespace GenerateLine
             var listString = new List<string>() { mask1, mask2, mask3, mask4 };
 
             var generator = new Generator();
+
+            foreach (var v in listString)
+            {
+                var command = generator.GetCommand(v);
+                if (command == null)
+                {
+                    Console.WriteLine("Команда не распознана");
+                }
+                else
+                {
+
+                    command.Execute(repeatsMask);
+                    Console.WriteLine("Маска: {0}", v);
+
+                    Console.WriteLine("Результат маски:\n{0}", generator);
+                    Console.WriteLine("\n");
+                }
+            }
         }
 
     }
