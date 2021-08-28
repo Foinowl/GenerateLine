@@ -28,11 +28,9 @@ namespace GenerateLine
         }
 
         public void ResetLine()
-
         {
             stringBuilder.Remove(0, stringBuilder.Length);
         }
-
         public void ResetPatterns()
         {
             _patterns = new List<string>();
@@ -46,9 +44,14 @@ namespace GenerateLine
         public override string ToString()
         {
             string output = string.Join(Environment.NewLine, _patterns.ToArray());
+
             return output;
         }
 
+        public List<string> GetData()
+        {
+            return _patterns;
+        }
         public string Print()
         {
             return ToString();
