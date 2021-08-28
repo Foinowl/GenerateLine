@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace GenerateLine
 {
@@ -7,34 +6,148 @@ namespace GenerateLine
     {
         static void Main(string[] args)
         {
-
-            string mask1 = "X3U3D3";
-            string mask2 = "X3{ - }U3{ - }D3";
-            string mask3 = "{+7 (}X3{) }X3{-}X2{-}X2";
-            string mask4 = "{Биrrrrrлет No }?7{-}Z";
-            int repeatsMask = 3;
-
-            var listString = new List<string>() { mask1, mask2, mask3, mask4 };
-
             var generator = new Generator();
 
-            foreach (var v in listString)
+
+            GetCommand();
+
+            while (true)
             {
-                var command = generator.GetCommand(v);
-                if (command == null)
+                try
                 {
-                    Console.WriteLine("Команда не распознана");
+                    string command = ReadCommand();
+                    ExecuteCommand(generator, command);
+                    Console.WriteLine("Команда исполнилась");
                 }
-                else
+                catch (Exception)
                 {
-
-                    command.Execute(repeatsMask);
-                    Console.WriteLine("Маска: {0}", v);
-
-                    Console.WriteLine("Результат маски:\n{0}", generator);
-                    Console.WriteLine("\n");
+                    Console.WriteLine("ООХххх что-то пошло не так.");
+                    GetCommand();
+                    continue;
                 }
+
+                Console.ReadKey();
             }
+            Console.ReadKey();
+        }
+
+        public static void ExecuteCommand(Generator gen, string command)
+        {
+            switch (command)
+            {
+                case "Write":
+                    Write(gen);
+                    break;
+                case "Owerwrite":
+                    OwerWrite(gen);
+                    break;
+                case "Delete":
+                    Delete(gen);
+                    break;
+                case "GetFile":
+                    GetFile(gen);
+                    break;
+                case "GetMask":
+                    GetMask(gen);
+                    break;
+                case "GetData":
+                    GetData(gen);
+                    break;
+                case "Commands":
+                    GetCommand();
+                    break;
+                default:
+                    throw new Exception("Команда не найдена");
+
+            }
+        }
+
+        public static void Write(Generator gen)
+        {
+            Console.WriteLine("Полный путь до файла");
+            string filename = Console.ReadLine();
+            Console.WriteLine("Маска");
+            string mask = Console.ReadLine();
+            Console.WriteLine("Указать количество строк для генерации строк");
+            int repeat = int.Parse(Console.ReadLine());
+
+            gen.WriteFile(filename, mask, repeat);
+        }
+
+        public static void OwerWrite(Generator gen)
+        {
+            Console.WriteLine("Полный путь до файла");
+            string filename = Console.ReadLine();
+            Console.WriteLine("Маска");
+            string mask = Console.ReadLine();
+            Console.WriteLine("Указать количество строк для генерации строк");
+            int repeat = int.Parse(Console.ReadLine());
+
+            gen.WriteFile(filename, mask, repeat, true);
+        }
+
+        public static void Delete(Generator gen)
+        {
+            Console.WriteLine("Полный путь до файла");
+            string filename = Console.ReadLine();
+
+            gen.DeleteFile(filename);
+        }
+
+        public static void GetFile(Generator gen)
+        {
+            Console.WriteLine("Полный путь до файла");
+            string filename = Console.ReadLine();
+
+            var s = gen.GetFile(filename);
+            Console.WriteLine("Маска:    {0}", s[0]);
+
+            Console.WriteLine("Сгенированные строки по маске");
+            for (int i = 1; i < s.Count; i++)
+            {
+                Console.WriteLine(s[i]);
+            }
+        }
+
+        public static void GetMask(Generator gen)
+        {
+            Console.WriteLine("Полный путь до файла");
+            string filename = Console.ReadLine();
+
+            var s = gen.GetFile(filename);
+            Console.WriteLine("Маска:    {0}", s[0]);
+        }
+
+        public static void GetData(Generator gen)
+        {
+            Console.WriteLine("Полный путь до файла");
+            string filename = Console.ReadLine();
+
+            var s = gen.GetFile(filename);
+
+            Console.WriteLine("Сгенированные строки по маске");
+            for (int i = 1; i < s.Count; i++)
+            {
+                Console.WriteLine(s[i]);
+            }
+        }
+
+        private static string ReadCommand()
+        {
+            Console.WriteLine("Введите команду:");
+            return Console.ReadLine();
+        }
+
+        private static void GetCommand()
+        {
+            Console.WriteLine("Доступные команды:");
+            Console.WriteLine("Write - это команда принимает в себя путь файла, маску, количество записей. Команда запишет в файл маску и данные по ней.");
+            Console.WriteLine("Owerwrite - это команда принимает в себя путь файла, маску, количество записей. Добавить в текущий файл маску при условии идентичности с предыдущей и в конец новые данные");
+            Console.WriteLine("Delete - это команда принимает в себя путь файла. Удаляет файл по его полному пути");
+            Console.WriteLine("GetFile - выводит всё данные из файла: маску и строки. Указать полный путь файла");
+            Console.WriteLine("GetMask - выводит только маску по полному пути файла");
+            Console.WriteLine("GetData - выводит данные по полному пути файла");
+            Console.WriteLine("Commands - Повторить команды");
         }
 
     }
