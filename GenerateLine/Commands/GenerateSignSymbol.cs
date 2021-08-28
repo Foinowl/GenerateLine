@@ -1,11 +1,9 @@
 ﻿using System;
-using Generate.Commands;
+using GenerateLine.Commands;
 
-namespace Generate
+namespace GenerateLine
 {
-    /// <summary>
-    /// Генерирует специальные символы: Z
-    /// </summary>
+
     class GenerateSignSymbol : GenerateSymbol
     {
         private int _repeat;

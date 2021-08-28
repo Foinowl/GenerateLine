@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Text;
-using Generate.Commands;
+using GenerateLine.Commands;
 
-namespace Generate
+namespace GenerateLine
 {
 
-    /// <summary>
-    /// Генериует констатныпе символы: { }
-    /// </summary>
     class GenerateConstant : GenerateSymbol
     {
         private char _ch;

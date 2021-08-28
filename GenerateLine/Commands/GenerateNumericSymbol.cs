@@ -1,12 +1,9 @@
 ﻿using System;
-using Generate.Commands;
+using GenerateLine.Commands;
 
-namespace Generate
+namespace GenerateLine
 {
 
-    /// <summary>
-    /// Генерирует цифры : X
-    /// </summary>
     class GenerateNumericSymbol : GenerateSymbol
     {
         private int _repeat;

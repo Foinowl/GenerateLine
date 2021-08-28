@@ -1,31 +1,20 @@
 ﻿using System;
 using System.Text;
 
-namespace Generate.Commands
+namespace GenerateLine.Commands
 {
 
-    /// <summary>
-    /// Класс родитель для генерации по заданной маске
-    /// </summary>
     class GenerateSymbol : ICommand
     {
-        /// <value>
-        /// Повторения символа
-        /// </value>
+
         private int _repeat;
 
-        /// <value>
-        /// Символ
-        /// </value>
         private char _ch;
 
         private GenerateStore _store;
 
         static Random rnd = new Random();
 
-        /// <summary>
-        /// Исходная строка по которой генерируется значения
-        /// </summary>
         private readonly string _set;
 
         public GenerateSymbol() { }
@@ -48,9 +37,6 @@ namespace Generate.Commands
         }
 
 
-        /// <summary>
-        /// Самый главный метод, генирирующий определенный символ маски по исходной строки
-        /// </summary>
         public virtual void Execute()
         {
             StringBuilder sb = new StringBuilder(_repeat);

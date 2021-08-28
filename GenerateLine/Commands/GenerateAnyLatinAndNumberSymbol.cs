@@ -1,12 +1,9 @@
 ﻿using System;
-using Generate.Commands;
+using GenerateLine.Commands;
 
-namespace Generate
+namespace GenerateLine
 {
 
-    /// <summary>
-    ///  Генириует символ из маски: ?
-    /// </summary>
     class GenerateAnyLatinAndNumberSymbol : GenerateSymbol
     {
         private int _repeat;

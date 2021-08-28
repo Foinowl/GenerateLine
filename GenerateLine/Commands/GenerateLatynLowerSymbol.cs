@@ -1,11 +1,9 @@
 ﻿using System;
-using Generate.Commands;
+using GenerateLine.Commands;
 
-namespace Generate
+namespace GenerateLine
 {
-    /// <summary>
-    /// Генерирует Латинские маленькие буквы: D
-    /// </summary>
+
     class GenerateLatynLowerSymbol : GenerateSymbol
     {
         private int _repeat;
